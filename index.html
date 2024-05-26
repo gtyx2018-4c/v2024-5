@@ -58,6 +58,15 @@
                                 <script>
                                     setInterval(FinalTestlimit,10);
                                 </script>
+                                <script>
+                                    //console.log(NaN);
+                                    var altime;
+                                    if(document.getElementById("zj1-day").innerHTML!=document.getElementById("zj1-day").innerHTML&&altime==0){
+                                        altime=1;
+                                        alert("检测到组件出错 你的游览器可能不支持倒计时组件");
+                                        alert("已知这个组件不支持Apple Webkit IE");
+                                    }       
+                                </script>
                             </div>
                         </td>
                     </tr>
@@ -65,5 +74,7 @@
             </table>
             <br>
         </div>
+        <p style="text-align: center;color: grey;">如果倒计时组件显示NaN则表示你的游览器不支持加载倒计时模块 请换Edge Chrome等游览器&#40;Firefox有渲染bug 不太推荐&#41;</p>
+        <p style="text-align: center;color: grey;">截至2024 5 25 IE最终版本 Apple Webkit等游览器不支持加载倒计时模块</p>
     </div>
 </body>
