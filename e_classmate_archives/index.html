@@ -29,6 +29,7 @@
                 }
             )
             json=json.responseText;
+            document.getElementById("debug").innerHTML=json;
             json=$.parseJSON(json);
             console.log(json);
             console.log("tot:"+json["0:{tot}"]);
@@ -39,6 +40,7 @@
         <!-- 预留位置结束 -->
         <h1><div class="classic_button" onclick="location.href='../index.html';"><p>&nbsp;返回&nbsp;</p></div>同学录</h1>
         <hr>
+        <p id="debug"></p>
         <div class="zj-main">
             <table>
                 <tbody>
