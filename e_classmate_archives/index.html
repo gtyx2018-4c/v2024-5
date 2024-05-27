@@ -28,11 +28,11 @@
                     }
                 }
             )
-            json=json.responseText;
+            json=json.responseText
             json=$.parseJSON(json);
             document.getElementById("debug").innerHTML=json;
             console.log(json);
-            console.log("tot:"+json["0:{tot}"]);
+            console.log("tot:"+json["tot"]);
         }
 
     </script>
