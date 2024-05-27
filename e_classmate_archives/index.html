@@ -7,6 +7,7 @@
     <title>广州铁路第一小学 2018届纪念册</title>
 </head>
 <body>
+    
     <div class="head"><!-- 顶栏 -->
         <iframe src="../public/head.html" style="width: 100%;border: 0px;height: 5%;"></iframe>
     </div>
@@ -19,7 +20,9 @@
                     type: "GET",
                     dataType: "json",
                     async: false,
-                    success: function(data){}
+                    success: function(data){
+                        console.log(data);
+                    }
                 }
             )
         }
