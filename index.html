@@ -11,6 +11,13 @@
     <div class="head">
         <iframe src="public/head.html" style="border: 0px;width: 100%;"></iframe>
     </div>
+        <dialog id="unsupport" style="border-radius: 10px;border: 0px;box-shadow: 12px 12px 2px 1px rgba(56, 56, 56, 0.2);">
+            <form method="dialog">
+                <p style="text-align: right;"><button style="font-family: ICON;height: 32px;width: 32px;"></button></p>
+            </form>
+            <h1 style="text-align: center;">你的游览器可能不支持倒计时组件</h1>
+            <p style="text-align: center;">请不要使用IE Safari访问该网页</p>
+        </dialog>
     <div class="main">
         <!-- 预留位置结束 -->
         <h1>功能</h1>
@@ -60,12 +67,15 @@
                                 </script>
                                 <script>
                                     //console.log(NaN);
-                                    var altime;
-                                    if(document.getElementById("zj1-day").innerHTML!=document.getElementById("zj1-day").innerHTML&&altime==0){
+                                    var altime= 0;
+                                    setTimeout(checkWork(),4000);
+                                    function checkWork(){
+                                    //.warn(typeof(document.getElementById("zj1-day").innerHTML==""));
+                                    if(document.getElementById("zj1-day").innerHTML==""&&altime==0){
+                                        document.getElementById("unsupport").showModal();
                                         altime=1;
-                                        alert("检测到组件出错 你的游览器可能不支持倒计时组件");
-                                        alert("已知这个组件不支持Apple Webkit IE");
-                                    }       
+                                    }
+                                    }
                                 </script>
                             </div>
                         </td>
