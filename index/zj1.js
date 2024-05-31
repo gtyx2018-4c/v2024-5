@@ -26,4 +26,5 @@ function inSchoollimit(){
         var s = parseInt(times % 60);
          //如果秒钟数小于 10，要变成 0 + 数字的形式 赋值给盒子
         second.innerHTML = s < 10 ? "0" + s : s;
+        checkWork();
     }

@@ -17,20 +17,23 @@ function renCard(time,list){
         Card_in_road = 0;
         Maindiv.innerHTML=Maindiv.innerHTML+"<tr id='"+runed+"tr'>";
         console.log("第"+runed+"次循环");
+        console.warn(limitcard);
         while(limitcard<5&&limitcard!=0){
-            if(id)
-            ++Card_in_road;
             i=i+1;
-            limitcard=--limitcard;
-            if(Card_in_road == 1){
-                document.getElementById(runed+"tr").innerHTML="<td id='"+i+"td'>";
+            --limitcard;
+            if(typeof list["Number"+i] == "undefined"){
             }else{
-                document.getElementById(runed+"tr").innerHTML=document.getElementById(runed+"tr").innerHTML+"<td id='"+i+"td'>";
+                ++Card_in_road;
+                if(Card_in_road == 1){
+                    document.getElementById(runed+"tr").innerHTML="<td id='"+i+"td'>";
+                }else{
+                    document.getElementById(runed+"tr").innerHTML=document.getElementById(runed+"tr").innerHTML+"<td id='"+i+"td'>";
             }
-            console.log(i);
-            //document.getElementById(i).innnerHTML="&#60;div class='zj-256' id="+list["Number"+i]+"&#60;&#60;br&#60;&#60;br&#60;&#60;p style='text-align: center;width: 100%;'&#60;&#60;h1&#60;"+list["Name"+i]+"&#60;/h2&#60;&#60;/p&#60;&#60;br&#60;&#60;br&#60;&#60;h1&#60;&#60;span style='color:green;'&#60;"+list["Number"+i]+"号"+"&#62;/span&#60;&#62;/h1&#60;&#62;br&#60;&#62;p&#60; style='width: 100%;text-align: center;color: grey;'&#60;点击查看详情&#62;/p&#60;&#62;/div&#60;";
-            document.getElementById(i+"td").innerHTML="<div class='zj-256' id='"+list["Number"+i]+"'>"
-            document.getElementById(list["Number"+i]).innerHTML="<br><br><h1 style='color: black;text-align: center;width: 100%;'>"+list["Name"+i]+"<br><h2 style='color: green;text-align: center;width: 100%;'>"+list["Number"+i]+"号"+"</h2><p style='color: gray;text-align: center;width: 100%;'>点击查看详情</p>";
+                console.log(i);
+                //document.getElementById(i).innnerHTML="&#60;div class='zj-256' id="+list["Number"+i]+"&#60;&#60;br&#60;&#60;br&#60;&#60;p style='text-align: center;width: 100%;'&#60;&#60;h1&#60;"+list["Name"+i]+"&#60;/h2&#60;&#60;/p&#60;&#60;br&#60;&#60;br&#60;&#60;h1&#60;&#60;span style='color:green;'&#60;"+list["Number"+i]+"号"+"&#62;/span&#60;&#62;/h1&#60;&#62;br&#60;&#62;p&#60; style='width: 100%;text-align: center;color: grey;'&#60;点击查看详情&#62;/p&#60;&#62;/div&#60;";
+                document.getElementById(i+"td").innerHTML="<div class='zj-256' id='"+list["Number"+i]+"'>"
+                document.getElementById(list["Number"+i]).innerHTML="<br><br><h1 style='color: black;text-align: center;width: 100%;'>"+list["Name"+i]+"<br><h2 style='color: green;text-align: center;width: 100%;'>"+list["Number"+i]+"号"+"</h2><p style='color: gray;text-align: center;width: 100%;'>点击查看详情</p>";
+            }
         }
         /*i=i+1;
         Maindiv.innerHTML=Maindiv.innerHTML+"<tr id='"+runed+"tr'>";
@@ -50,5 +53,5 @@ function renCard(time,list){
         //Maindiv.innerHTML=Maindiv.innerHTML+"&#62;/tr&#60;";
         */
     }
-    document.getElementById("loadText").innerHTML="加载完成";
+    document.getElementById("loadText").innerHTML="<span style='color:green;'>加载完成</span>";
 }
