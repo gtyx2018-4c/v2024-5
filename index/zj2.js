@@ -26,3 +26,24 @@ function FinalTestlimit(){
          //如果秒钟数小于 10，要变成 0 + 数字的形式 赋值给盒子
         second.innerHTML = s < 10 ? "0" + s : s;
 }
+function FinalTestAfter(){
+    var day = document.getElementById("zj2-day");
+    var hour = document.getElementById("zj2-hour");
+    var minute = document.getElementById("zj2-min");
+    var second = document.getElementById("zj2-sec");
+    window.setTimeout("show_runtime()",1000);X=new 
+    Date("6/21/2024 11:50:00");
+    Y=new Date();
+    T=(Y.getTime()-X.getTime());
+    M=24*60*60*1000;
+    a=T/M;A=Math.floor(a);
+    b=(a-A)*24;
+    B=Math.floor(b);
+    c=(b-B)*60;
+    C=Math.floor((b-B)*60);
+    D=Math.floor((c-C)*60);
+    day.innerHTML = A;
+    hour.innerHTML = B;
+    minute.innerHTML = C;
+    second.innerHTML = D;
+}

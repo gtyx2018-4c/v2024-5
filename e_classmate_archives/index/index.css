@@ -1,8 +1,10 @@
 .main{
-    background-color: azure;
+    margin: auto;
+    background-color: white;
 }
 body{
     font-family: "Harmony OS font";
+    background-color: rgb(50, 50, 50);
 }
 .zj-main{
     background-color: azure;

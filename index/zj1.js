@@ -5,7 +5,7 @@ function inSchoollimit(){
     var minute = document.getElementById("zj1-min");
     var second = document.getElementById("zj1-sec");
     //获取截止时间的时间戳（单位毫秒）
-    var inputTime = +new Date("2024-7-14 12:00:00");
+    var inputTime = +new Date("2024-6-28 12:00:00");
         //获取当前时间的时间戳（单位毫秒）
         var nowTime = +new Date();
         //把剩余时间毫秒数转化为秒
