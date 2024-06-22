@@ -45,6 +45,7 @@
         <hr>
         <p>毕业赠言</p>
         <pre id="text"></pre>
+        <h1>毕业签名</h1>
         <div id="sign"></div>
         <h1>其他平台</h1>
         <div id="other"></div>
@@ -98,13 +99,13 @@
                         document.getElementById("text").innerHTML=info.text;
                     }
                     if(typeof info.sign == "undefined"){
-                        if(info.sex="Male"){
+                        if(info.sex=="Male"){
                             document.getElementById("sign").innerHTML="<p style='color:red;'>他似乎不想和你共享</p>";
                         }else{
                             document.getElementById("sign").innerHTML="<p style='color:red;'>她似乎不想和你共享</p>"
                         }
                     }else{
-                        document.getElementById("sign").innerHTML="<p>毕业签名</p><img src='"+info.sign+"' style='height:auto;width:auto'>"
+                        document.getElementById("sign").innerHTML="<img src='"+info.sign+"' style='height:auto;width:auto'>"
                     }
                     if(typeof info.other == "undefined"){
                         document.getElementById("other").innerHTML="<p style='color:red;'>没有/不共享</p>"
