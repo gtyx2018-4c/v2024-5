@@ -16,13 +16,14 @@ function renCard(time,list){
         oruned = runed;
         Card_in_road = 0;
         Maindiv.innerHTML=Maindiv.innerHTML+"<tr id='"+runed+"tr'>";
+        var limitcardinroad = 5;
         console.log("第"+runed+"次循环");
         console.warn(limitcard);
-        while(limitcard<5&&limitcard!=0){
+        while(Card_in_road!=6){//开始一列
             i=i+1;
-            --limitcard;
             if(typeof list["Number"+i] == "undefined"){
             }else{
+                --limitcardinroad;
                 ++Card_in_road;
                 if(Card_in_road == 1){
                     document.getElementById(runed+"tr").innerHTML="<td id='"+i+"td'>";
