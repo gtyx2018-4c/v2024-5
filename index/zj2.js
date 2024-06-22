@@ -31,7 +31,6 @@ function FinalTestAfter(){
     var hour = document.getElementById("zj2-hour");
     var minute = document.getElementById("zj2-min");
     var second = document.getElementById("zj2-sec");
-    window.setTimeout("show_runtime()",1000);X=new 
     Date("6/21/2024 11:50:00");
     Y=new Date();
     T=(Y.getTime()-X.getTime());
