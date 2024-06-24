@@ -1,6 +1,7 @@
 //渲染-加载列表
 //var tmp_card;
 var Maindiv;
+var last;
 //var Card_in_road;
 Maindiv = document.getElementById("zj-main-table");
 function renCard(time,list){
@@ -100,4 +101,20 @@ function renCard(time,list){
         card_in_a_road = 0;
     }
     document.getElementById("loadText").innerHTML="<span style='color:green;'>加载完成</span>";
+}
+function hightligthSetBackThread(){
+    var temp;
+    temp = location.href.split("#")[1]//获取#以后
+    if(typeof temp == "undefined" == false){
+        temp = temp.split("t");
+        if(temp[0] != last){
+            if(temp[1] == "d"){//看看是不是td
+                $("*").css($(this).css+"background-color","white");
+                $("#"+temp[0]+"td").css($(this).css+"background-color","skyblue");
+                //console.log('temp',temp)
+                console.log('temp',temp,"last",last)
+                last = temp[0]
+            }
+        }
+    }
 }

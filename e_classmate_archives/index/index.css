@@ -14,7 +14,6 @@ body{
     border-radius: 10%;
     height: 256px;
     width: 256px;
-    background-color: white;
     box-shadow: 10%;
     transition-timing-function:easeInOutQuart;
 }
@@ -62,4 +61,14 @@ body{
     transition-duration:0.2s;
     /*动画*/
     background-color: plum;
+}
+.zj-256-hightlight{
+    text-align: center;
+    transition-duration:0.5s;
+    border-radius: 10%;
+    height: 256px;
+    width: 256px;
+    background-color: skyblue;
+    box-shadow: 10%;
+    transition-timing-function:easeInOutQuart;
 }
