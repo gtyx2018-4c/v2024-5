@@ -9,6 +9,7 @@ body{
     background-color: azure;
 }
 .zj-256{
+    text-align: center;
     transition-duration:0.5s;
     border-radius: 10%;
     height: 256px;
