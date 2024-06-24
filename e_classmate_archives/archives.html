@@ -102,15 +102,22 @@
                         if(info.sex=="Male"){
                             document.getElementById("sign").innerHTML="<p style='color:red;'>他似乎不想和你共享</p>";
                         }else{
-                            document.getElementById("sign").innerHTML="<p style='color:red;'>她似乎不想和你共享</p>"
+                            document.getElementById("sign").innerHTML="<p style='color:red;'>她似乎不想和你共享</p>";
                         }
                     }else{
-                        document.getElementById("sign").innerHTML="<img src='"+info.sign+"' style='height:auto;width:auto'>"
+                        document.getElementById("sign").innerHTML="<img src='"+info.sign+"' style='height:auto;width:auto'>";
                     }
                     if(typeof info.other == "undefined"){
-                        document.getElementById("other").innerHTML="<p style='color:red;'>没有/不共享</p>"
+                        document.getElementById("other").innerHTML="<p style='color:red;'>没有/不共享</p>";
                     }else{
-                        document.getElementById("other").innerHTML="<iframe src='"+info.other+"' style='border-radius: 5px;border: 0px;margin: 0px;background-color:white;'></iframe>"
+                        //document.getElementById("other").innerHTML="<iframe src='"+info.other+"' style='border-radius: 5px;border: 0px;margin: 0px;background-color:white;' sandbox='allow-scripts'></iframe>";
+                        $.ajax({
+                            "async":true,
+                            "url":info.other,
+                            "success":function(data){
+                                document.getElementById("other").innerHTML=data;
+                            }
+                        });
                     }
                 }
             </script>

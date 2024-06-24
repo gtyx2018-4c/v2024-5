@@ -69,6 +69,7 @@ function renCard(time,list){
     console.log('list',list);
     while(finish == false){//运行次数
         runed = runed+1
+        console.log('runed',runed)
         if(runed == 1){//直接写入会似
             Maindiv.innerHTML="<tr id='"+runed+"tr'>";//创建一列
         }else{
@@ -77,6 +78,7 @@ function renCard(time,list){
         NowList = document.getElementById(runed+"tr");//获取当前行
         while(card_in_a_road<5){//循环到5张卡片填满
             all_runed = all_runed+1//有没有都得加
+            console.log('all_runed',all_runed)
             if(time < all_runed){//是不是搞完了
                 card_in_a_road = 5;
                 finish = true;//结束循环
