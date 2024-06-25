@@ -71,11 +71,7 @@ function renCard(time,list){
     while(finish == false){//运行次数
         runed = runed+1
         console.log('runed',runed)
-        if(runed == 1){//直接写入会似
-            Maindiv.innerHTML="<tr id='"+runed+"tr'>";//创建一列
-        }else{
-            Maindiv.innerHTML=Maindiv.innerHTML + "<tr id='"+runed+"tr'>";//原有基础上再建一列
-        }
+        Maindiv.innerHTML=Maindiv.innerHTML + "<tr id='"+runed+"tr'>";//原有基础上再建一列
         NowList = document.getElementById(runed+"tr");//获取当前行
         while(card_in_a_road<5){//循环到5张卡片填满
             all_runed = all_runed+1//有没有都得加
@@ -109,12 +105,16 @@ function hightligthSetBackThread(){
         temp = temp.split("t");
         if(temp[0] != last){
             if(temp[1] == "d"){//看看是不是td
-                $("*").css($(this).css+"background-color","white");
-                $("#"+temp[0]+"td").css($(this).css+"background-color","skyblue");
+                $("td[id!='"+temp[0]+"td']").children("div").removeClass("zj-256-hightlight");
+                $("#"+temp[0]+"td").children("div").addClass("zj-256-hightlight");
                 //console.log('temp',temp)
                 console.log('temp',temp,"last",last)
                 last = temp[0]
             }
         }
     }
+}
+function searchService(Value){
+    var target = $("h1,span").filter(":Contains("+Value+")").parent("*").parent("*").attr('id');//获取td的id
+    location.href="#"+target;
 }

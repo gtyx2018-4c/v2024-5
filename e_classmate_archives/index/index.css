@@ -9,6 +9,7 @@ body{
     background-color: azure;
 }
 .zj-256{
+    background-color: white;
     text-align: center;
     transition-duration:0.5s;
     border-radius: 10%;
@@ -71,4 +72,14 @@ body{
     background-color: skyblue;
     box-shadow: 10%;
     transition-timing-function:easeInOutQuart;
+}
+.LintUIinput{
+    background-color:aqua;
+    border-radius: 5px;
+    border: 0px;
+    /*动画过渡*/
+    transition-timing-function:easeInOutQuart;
+    transition-duration:0.2s;
+    /*动画*/
+    position: relative;
 }
