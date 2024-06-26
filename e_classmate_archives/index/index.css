@@ -7,6 +7,7 @@ body{
 }
 .zj-main{
     background-color: azure;
+    position:relative
 }
 .zj-256{
     background-color: white;
@@ -17,6 +18,7 @@ body{
     width: 256px;
     box-shadow: 10%;
     transition-timing-function:easeInOutQuart;
+    position:relative;
 }
 .zj1-num{
     background-color: grey;

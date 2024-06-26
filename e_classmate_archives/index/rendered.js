@@ -86,10 +86,10 @@ function renCard(time,list){
                 card_in_a_road = card_in_a_road + 1;//加卡片数量
                 if(card_in_a_road == 1){
                     document.getElementById(runed+"tr").innerHTML="<td id='"+all_runed+"td'>";//开始创建卡片容器
-                    document.getElementById(all_runed+"td").innerHTML = "<div class='zj-256' onclick='location.href = \"archives.html?flag="+ all_runed +"\";'><br><p style='text-align: center;width: 100%;'><h1>"+list["Name"+all_runed]+"</h1></p><br><br><h1><span style='color:green;'>"+list["Number"+all_runed]+"号"+"</span></h1><p style='width: 100%;text-align: center;color: grey;'>点击查看详情</p></div>";//创建卡片
+                    document.getElementById(all_runed+"td").innerHTML = "<div class='zj-256' id='"+all_runed+"' onclick='setTimeout(\"location.href= &quot;archives.html?flag="+all_runed+" &quot;\", 3000 );'><br><p style='text-align: center;width: 100%;'><h1>"+list["Name"+all_runed]+"</h1></p><br><br><h1><span style='color:green;'>"+list["Number"+all_runed]+"号"+"</span></h1><p style='width: 100%;text-align: center;color: grey;'>点击查看详情</p></div>";//创建卡片
                 }else{
                     document.getElementById(runed+"tr").innerHTML=document.getElementById(runed+"tr").innerHTML+"<td id='"+all_runed+"td'>";//开始增加卡片容器
-                    document.getElementById(all_runed+"td").innerHTML = document.getElementById(all_runed+"td").innerHTML+"<div class='zj-256' onclick='location.href = \"archives.html?flag="+ all_runed +"\";'><br><p style='text-align: center;width: 100%;'><h1>"+list["Name"+all_runed]+"</h1></p><br><br><h1><span style='color:green;'>"+list["Number"+all_runed]+"号"+"</span></h1><p style='width: 100%;text-align: center;color: grey;'>点击查看详情</p></div>";//增加卡片
+                    document.getElementById(all_runed+"td").innerHTML = document.getElementById(all_runed+"td").innerHTML+"<div class='zj-256' id='"+all_runed+"' onclick='setTimeout(\"location.href=&quot;archives.html?flag="+all_runed+"&quot;\", 3000 );'><br><p style='text-align: center;width: 100%;'><h1>"+list["Name"+all_runed]+"</h1></p><br><br><h1><span style='color:green;'>"+list["Number"+all_runed]+"号"+"</span></h1><p style='width: 100%;text-align: center;color: grey;'>点击查看详情</p></div>";//增加卡片
                 }
                 console.log('card_in_a_road',card_in_a_road);
             }
