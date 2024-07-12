@@ -36,7 +36,8 @@
         <br>
     <div class="main">
         <h1 style="text-align: center;" id="name"></h1>
-        <p style="text-align: center;color: gray;" id="number"></p>
+        <p id="number"></p>
+        <p id="ms"></p>
         <h1 style="text-align: center;" id="sex"></h1>
         <h1>联系方式:</h1>
         <p id="wx"></p>
@@ -83,6 +84,11 @@
                         document.getElementById("sex").innerHTML="<span style='color:blue;'>男♂</span>"
                     }else{
                         document.getElementById("sex").innerHTML="<span style='color:red;'>女♀</span>"
+                    }
+                    if(info.ms != ""){
+                        document.getElementById("ms").innerHTML="中学:"+info.ms;
+                    }else{
+                        document.getElementById("ms").innerHTML="中学:未知";
                     }
                     if(typeof info.wx != "undefined"){
                         document.getElementById("wx").innerHTML="微信号:"+info.wx;
